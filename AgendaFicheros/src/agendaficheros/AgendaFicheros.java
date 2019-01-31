@@ -54,6 +54,8 @@ public class AgendaFicheros {
                     agenda.mostrarContactos();
                     break;
                 case 6: 
+                    System.out.println("Adios");
+                    ioDatos.Fichero.guardarDatosDisco(agenda.getvAgenda());
                     break;
             }
         }
