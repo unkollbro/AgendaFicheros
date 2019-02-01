@@ -53,6 +53,11 @@ public class Contacto {
     public String toString() {
         return nombre + " --- " + telefono;
     }
+
+    public String escribir() {
+        return nombre+"-"+telefono;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

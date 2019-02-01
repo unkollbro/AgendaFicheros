@@ -55,5 +55,34 @@ public class Fichero {
         File f = null;
         FileWriter fw = null;
         PrintWriter pw = null;
+        
+        Scanner leer = null;
+        f = new File("agenda.txt");
+        
+        if(!f.exists()){
+            try {
+                f.createNewFile();
+            } catch (IOException ex) {
+                //Logger.getLogger(Fichero.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error al crear el fichero");
+            }
+        }
+        
+        try {
+            fw = new FileWriter(f);
+            pw = new PrintWriter(f);
+            
+            for (Contacto contacto : vAgenda) {
+                pw.println(contacto.escribir());
+            }
+        } catch (IOException ex) {
+            //Logger.getLogger(Fichero.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error al escribir en fichero");
+        }finally{
+            if(pw!=null){
+                pw.close();
+            }
+        }
+        
     }
 }

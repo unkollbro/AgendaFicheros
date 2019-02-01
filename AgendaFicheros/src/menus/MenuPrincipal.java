@@ -16,12 +16,13 @@ public class MenuPrincipal {
     public static int menuPrincipal(){
         int opc=0;
         Scanner leer = null;
-        while(opc<1 || opc>5){
+        while(opc<1 || opc>6){
             System.out.println("1 - Añadir Contacto");
             System.out.println("2 - Borrar Contacto");
             System.out.println("3 - Editar Contacto");
             System.out.println("4 - Mostrar contacto");
             System.out.println("5 - Mostrar contactos");
+            System.out.println("6 - Salir");
             System.out.print("Escribe una opcion : ");
             try{
                 leer = new Scanner(System.in);
